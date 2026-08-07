@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile | Junsu Ha</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .navbar a:hover { background-color: #ddd; color: black; }
+  .navbar a.active { background-color: #04AA6D; color: white; }
+
+  .content { padding: 40px 20px; max-width: 850px; margin: 0 auto; }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #04AA6D;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .back-link:hover { text-decoration: underline; }
+
+  .profile-header { text-align: center; margin-bottom: 30px; }
+  .profile-header img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #eee;
+    margin-bottom: 12px;
+  }
+  .profile-header h1 { margin: 0; }
+
+  .id-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .id-list a {
+    color: #04AA6D;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #04AA6D;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 0.9em;
+  }
+  .id-list a:hover { background: #04AA6D; color: white; }
+
+  .section { margin-bottom: 44px; }
+  .section h2 {
+    border-bottom: 2px solid #04AA6D;
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+  }
+
+  .timeline-item { margin-bottom: 18px; }
+  .timeline-date {
+    font-weight: bold;
+    color: #04AA6D;
+    font-size: 0.95em;
+  }
+  .timeline-role { font-weight: bold; margin: 2px 0; }
+  .timeline-detail { color: #555; font-size: 0.95em; }
+  .timeline-detail em { color: #444; }
+
+  .award-item { margin-bottom: 14px; }
+  .award-title { font-weight: bold; }
+  .award-meta { color: #666; font-size: 0.9em; }
+
+  .review-item { margin-bottom: 12px; }
+  .review-title { font-weight: bold; }
+  .review-detail { color: #666; font-size: 0.9em; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  .contact-block h3 {
+    font-size: 1em;
+    margin-bottom: 6px;
+    color: #04AA6D;
+  }
+  .contact-block p, .contact-block a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 3px;
+  }
+  .contact-block a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.85em;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a class="active" href="profile.html">Profile</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="patents.html">Patents</a>
+</div>
+
+<div class="content">
+  <a class="back-link" href="index.html">&larr; Back to Home</a>
+
+  <div class="profile-header">
+    <img src="profile-photo.jpg" alt="Portrait of Junsu Ha">
+    <h1>Junsu Ha</h1>
+  </div>
+
+  <div class="id-list">
+    <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://scholar.google.com/citations?user=XXXXXXX" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="https://www.researchgate.net/profile/Junsu-Ha" target="_blank" rel="noopener">ResearchGate</a>
+  </div>
+
+  <div class="section">
+    <h2>Career &amp; Education</h2>
+
+    <div class="timeline-item">
+      <div class="timeline-date">[YYYY.MM]&ndash;</div>
+      <div class="timeline-role">Postdoctoral Researcher, [소속 기관명]</div>
+      <div class="timeline-detail">Advisor: Professor [지도교수명]</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">[YYYY.MM]&ndash;[YYYY.MM]</div>
+      <div class="timeline-role">Ph.D., [소속 기관명]</div>
+      <div class="timeline-detail">Department of [학과명]</div>
+      <div class="timeline-detail"><em>Thesis title: [학위논문 제목]</em></div>
+      <div class="timeline-detail">Advisor: Professor [지도교수명]</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">[YYYY.MM]&ndash;[YYYY.MM]</div>
+      <div class="timeline-role">B.S., [소속 기관명]</div>
+      <div class="timeline-detail">[전공명]</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Awards &amp; Honors</h2>
+
+    <div class="award-item">
+      <div class="award-title">[수상명]</div>
+      <div class="award-meta">[수여 기관] &middot; [YYYY/MM/DD]</div>
+    </div>
+
+    <div class="award-item">
+      <div class="award-title">[수상명]</div>
+      <div class="award-meta">[수여 기관] &middot; [YYYY/MM/DD]</div>
+    </div>
+    <!-- 수상 내역 추가 시 위 형태로 award-item 블록을 복사해 이어붙이면 됩니다 -->
+  </div>
+
+  <div class="section">
+    <h2>Peer Review</h2>
+
+    <div class="review-item">
+      <div class="review-title">01. [저널명] ([연도], [역할])</div>
+      <div class="review-detail">[간단한 설명]</div>
+    </div>
+    <!-- 심사 이력 추가 시 위 형태로 review-item 블록을 이어붙이면 됩니다 -->
+  </div>
+
+  <div class="section">
+    <h2>Contact &amp; Links</h2>
+    <div class="contact-grid">
+      <div class="contact-block">
+        <h3>Email</h3>
+        <p>[이메일 주소]</p>
+      </div>
+      <div class="contact-block">
+        <h3>Affiliation</h3>
+        <p>Postdoctoral Researcher</p>
+        <p>[소속 기관명]</p>
+      </div>
+      <div class="contact-block">
+        <h3>Lab Website</h3>
+        <a href="#" target="_blank" rel="noopener">[소속 랩 웹사이트]</a>
+      </div>
+      <div class="contact-block">
+        <h3>Social</h3>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>&copy; 2026 Junsu Ha</footer>
+
+</body>
+</html>
