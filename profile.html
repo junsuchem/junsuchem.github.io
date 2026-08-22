@@ -13,7 +13,6 @@
     color: #222;
     line-height: 1.6;
   }
-
   .navbar {
     background-color: #333;
     overflow: hidden;
@@ -30,9 +29,7 @@
   }
   .navbar a:hover { background-color: #ddd; color: black; }
   .navbar a.active { background-color: #002F5F; color: white; }
-
   .content { padding: 40px 20px; max-width: 850px; margin: 0 auto; }
-
   .back-link {
     display: inline-block;
     margin-bottom: 20px;
@@ -42,7 +39,7 @@
   }
   .back-link:hover { text-decoration: underline; }
 
-  .profile-header { text-align: center; margin-bottom: 30px; }
+  .profile-header { text-align: center; margin-bottom: 20px; }
   .profile-header img {
     width: 160px;
     height: 160px;
@@ -52,6 +49,18 @@
     margin-bottom: 12px;
   }
   .profile-header h1 { margin: 0; }
+
+  /* 맨 위: Contact & Links, 별도 섹션 헤딩 없이 나열 */
+  .top-contact {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 0.95em;
+  }
+  .top-contact div { margin-bottom: 4px; }
+  .top-contact a { color: #002F5F; text-decoration: none; font-weight: bold; }
+  .top-contact a:hover { text-decoration: underline; }
+  .top-contact .sep { color: #bbb; margin: 0 6px; }
 
   .id-list {
     display: flex;
@@ -78,6 +87,8 @@
     margin-bottom: 18px;
   }
 
+  /* Education & Career: 헤딩 없이 바로 시작 */
+  .timeline-block { margin-bottom: 44px; }
   .timeline-item { margin-bottom: 18px; }
   .timeline-date {
     font-weight: bold;
@@ -96,24 +107,6 @@
   .review-title { font-weight: bold; }
   .review-detail { color: #666; font-size: 0.9em; }
 
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-  }
-  .contact-block h3 {
-    font-size: 1em;
-    margin-bottom: 6px;
-    color: #002F5F;
-  }
-  .contact-block p, .contact-block a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    margin-bottom: 3px;
-  }
-  .contact-block a:hover { text-decoration: underline; }
-
   footer {
     text-align: center;
     padding: 20px;
@@ -125,7 +118,6 @@
 </style>
 </head>
 <body>
-
 <div class="navbar">
   <a href="index.html">Home</a>
   <a class="active" href="profile.html">Profile</a>
@@ -133,7 +125,6 @@
   <a href="publications.html">Publications</a>
   <a href="patents.html">Patents</a>
 </div>
-
 <div class="content">
   <a class="back-link" href="index.html">&larr; Back to Home</a>
 
@@ -142,38 +133,55 @@
     <h1>Junsu Ha</h1>
   </div>
 
+  <!-- Contact & Links: 섹션 헤딩 없이 맨 위에 바로 나열 -->
+  <div class="top-contact">
+    <div>Postdoctoral Researcher, Stockholm University</div>
+    <div><a href="mailto:junsu.ha@su.se">junsu.ha@su.se</a></div>
+    <div>
+      <a href="https://junsuchem.github.io/" target="_blank" rel="noopener">Homepage</a>
+      <span class="sep">&middot;</span>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">&middot;</span>
+      <a href="#" target="_blank" rel="noopener">X</a>
+      <span class="sep">&middot;</span>
+      <a href="https://bsky.app/profile/junsuha.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+    </div>
+  </div>
+
   <div class="id-list">
     <a href="https://orcid.org/0000-0002-0642-351X" target="_blank" rel="noopener">ORCID</a>
     <a href="https://scholar.google.com/citations?user=CnOzbEoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
   </div>
 
+  <!-- Education & Professional Career -->
   <div class="section">
-    <h2>Educations & Experience</h2>
-
+    <h2>Education &amp; Professional Career</h2>
+    <div class="timeline-block">
     <div class="timeline-item">
-      <div class="timeline-date">02.2025&ndash;</div>
+      <div class="timeline-date">2025.02.&ndash;</div>
       <div class="timeline-role">Postdoctoral Researcher, Stockholm University</div>
-      <div class="timeline-detail">Advisor: Prof. Xiaodong Zou & Dr. A. Ken Inge</div>
+      <div class="timeline-detail">Supervisor: Prof. Xiaodong Zou &amp; Dr. A. Ken Inge</div>
     </div>
 
     <div class="timeline-item">
-      <div class="timeline-date">02.2024&ndash;02.2025</div>
+      <div class="timeline-date">2024.02.&ndash;2025.02.</div>
       <div class="timeline-role">Postdoctoral Researcher, Ewha Womans University</div>
       <div class="timeline-detail">Department of Chemistry and Nanoscience</div>
-      <div class="timeline-detail">Advisor: Prof. Hoi Ri Moon</div>
+      <div class="timeline-detail">Supervisor: Prof. Hoi Ri Moon</div>
     </div>
-    
-    <div class="timeline-item">
-      <div class="timeline-date">02.2018&ndash;02.2024</div>
-      <div class="timeline-role">Ph.D., Ulsan National Institute of Science and Technology (UNIST)</div>
-      <div class="timeline-detail">Department of Chemistry</div>
-      <div class="timeline-detail">Advisor: Prof. Hoi Ri Moon</div>
-    </div>   
 
     <div class="timeline-item">
-      <div class="timeline-date">02.2018
+      <div class="timeline-date">2018.02.&ndash;2024.02.</div>
+      <div class="timeline-role">Ph.D., Ulsan National Institute of Science and Technology (UNIST)</div>
+      <div class="timeline-detail">Department of Chemistry</div>
+      <div class="timeline-detail">Supervisor: Prof. Hoi Ri Moon</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2018.02.</div>
       <div class="timeline-role">B.S., Inha University</div>
       <div class="timeline-detail">Department of Chemistry</div>
+    </div>
     </div>
   </div>
 
@@ -181,54 +189,34 @@
     <h2>Awards &amp; Honors</h2>
 
     <div class="award-item">
-      <div class="award-title">[수상명]</div>
-      <div class="award-meta">[수여 기관] &middot; [YYYY/MM/DD]</div>
+      <div class="award-title">Swedish Academy of Sciences Scholarship</div>
+      <div class="award-meta">Swedish Academy of Sciences &middot; 2026.03.</div>
     </div>
 
     <div class="award-item">
-      <div class="award-title">[수상명]</div>
-      <div class="award-meta">[수여 기관] &middot; [YYYY/MM/DD]</div>
+      <div class="award-title">Post-Doc. Growth-Oriented Collaborative Research (Post-Doc. 성장형 공동연구)</div>
+      <div class="award-meta">National Research Foundation of Korea &middot; 2024.09.&ndash;2027.08.</div>
+    </div>
+
+    <div class="award-item">
+      <div class="award-title">Top Cited Article 2021&ndash;2022 in Bull. Kor. Chem. Soc., &ldquo;MOF-on-MOF Architectures: Applications in Separation, Catalysis, and Sensing&rdquo;</div>
+      <div class="award-meta">Wiley Bulletin of the Korean Chemical Society &middot; 2022.</div>
+    </div>
+
+    <div class="award-item">
+      <div class="award-title">Best Poster Award</div>
+      <div class="award-meta">8th Asian Conference on Coordination Chemistry (ACCC8) &middot; 2022.08.</div>
+    </div>
+
+    <div class="award-item">
+      <div class="award-title">Ph.D. Student Research Promotion Fund (학문후속세대 박사과정생 연구장려금지원사업)</div>
+      <div class="award-meta">National Research Foundation of Korea &middot; 2020.06.&ndash;2022.05.</div>
     </div>
     <!-- 수상 내역 추가 시 위 형태로 award-item 블록을 복사해 이어붙이면 됩니다 -->
   </div>
 
-  <div class="section">
-    <h2>Peer Review</h2>
-
-    <div class="review-item">
-      <div class="review-title">01. [저널명] ([연도], [역할])</div>
-      <div class="review-detail">[간단한 설명]</div>
-    </div>
-    <!-- 심사 이력 추가 시 위 형태로 review-item 블록을 이어붙이면 됩니다 -->
-  </div>
-
-  <div class="section">
-    <h2>Contact &amp; Links</h2>
-    <div class="contact-grid">
-      <div class="contact-block">
-        <h3>Email</h3>
-        <p>junsu.ha@su.se</p>
-      </div>
-      <div class="contact-block">
-        <h3>Affiliation</h3>
-        <p>Postdoctoral Researcher</p>
-        <p>Stockholm University</p>
-      </div>
-      <div class="contact-block">
-        <h3>Lab Website</h3>
-        <a href="#" target="_blank" rel="noopener">https://junsuchem.github.io/</a>
-      </div>
-      <div class="contact-block">
-        <h3>Social</h3>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">X</a>
-      </div>
-    </div>
-  </div>
 
 </div>
-
 <footer>&copy; 2026 Junsu Ha</footer>
-
 </body>
 </html>
