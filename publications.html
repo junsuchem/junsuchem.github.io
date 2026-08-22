@@ -349,7 +349,7 @@
   let lastYear = null;
   publications.forEach((pub, i) => {
     const number = total - i;
-    const roleClass = pub.role.toLowerCase().includes("first") ? "role-first" : "";
+    const roleClass = /first|corresponding/i.test(pub.role) ? "role-first" : "";
 
     if (pub.year !== lastYear) {
       const yearHeading = document.createElement("div");
