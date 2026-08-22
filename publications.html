@@ -48,7 +48,8 @@
   /* 각 논문 항목 */
   .pub-item {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 14px;
     padding: 22px 0;
     border-bottom: 1px solid #e5e5e5;
   }
@@ -56,13 +57,12 @@
 
   /* TOC 이미지 */
   .pub-toc img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
+    display: block;
+    max-width: 100%;
+    height: auto;
     border-radius: 6px;
     border: 1px solid #ddd;
     background: #f7f7f7;
-    flex-shrink: 0;
   }
 
   .pub-main { flex: 1; min-width: 0; }
