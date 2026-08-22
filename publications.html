@@ -14,7 +14,6 @@
     line-height: 1.6;
   }
 
-  /* 상단 네비게이션 */
   .navbar {
     background-color: #333;
     overflow: hidden;
@@ -91,15 +90,22 @@
     color: #444;
   }
   .pub-tag.role-first {
-    background: #e6f7ef;
+    background: #e6eef7;
     border-color: #002F5F;
     color: #002F5F;
+    font-weight: bold;
+  }
+  .pub-tag.status-tag {
+    background: #fff6e0;
+    border-color: #e0a800;
+    color: #a97400;
     font-weight: bold;
   }
 
   .pub-title { font-size: 1.1em; font-weight: bold; margin-bottom: 6px; }
   .pub-authors { font-size: 0.95em; color: #333; margin-bottom: 4px; }
   .pub-authors .me { text-decoration: underline; }
+  .pub-authors sup { font-size: 0.75em; }
   .pub-journal { font-size: 0.95em; color: #555; margin-bottom: 4px; }
   .pub-note { font-size: 0.9em; color: #777; font-style: italic; margin-bottom: 4px; }
   .pub-link {
@@ -147,42 +153,230 @@
    번호는 자동으로 매겨지므로 순서만 신경 쓰면 됩니다.
 
    각 필드 설명:
-   - journal   : 저널 약칭 (배지에 표시, 예: "Angew. Chem. Int. Ed.")
-   - year      : 연도 (배지에 표시)
-   - role      : "First author" | "Co-author" | "Corresponding author" 등
-   - title     : 논문 제목
-   - authors   : 저자 목록 문자열. 본인 이름은 <span class="me">Ha, J.</span>
-                 처럼 감싸면 밑줄로 강조됩니다.
-   - journalFull : 정식 인용 표기 (저널명, 연도, 권, 페이지 등)
-   - note      : (선택) Hot Paper, Cover feature 등 추가 코멘트. 없으면 "" 로 둘 것
-   - link      : DOI 또는 논문 링크. 없으면 "" 로 둘 것
-   - toc       : TOC 이미지 파일 경로. 이미지 파일을 같은 폴더의
-                 예: "toc/pub01.jpg" 형태로 넣고 경로만 맞춰주면 됩니다.
-                 파일이 없으면 빈 이미지 박스로 표시됩니다.
+   - journal     : 저널 약칭 (배지에 표시, 예: "Angew. Chem. Int. Ed.")
+   - year        : 연도 (배지에 표시)
+   - status      : (선택) "Submitted" | "In revision" | "Accepted" 등
+                   출판 전 상태를 노란 배지로 표시. 정식 출판된 논문이면
+                   "" 로 두면 배지가 생략됩니다.
+   - role        : "First author" | "Co-author" | "Corresponding author" 등.
+                   공동 1저자인 경우에도 그냥 "First author"로 표시합니다.
+                   "first"라는 단어가 포함되면 자동으로 강조 배지(파란색)로 표시됩니다.
+   - title       : 논문 제목
+   - authors     : 저자 목록 문자열. 본인 이름은 <span class="me">Junsu Ha</span>
+                   처럼 감싸면 밑줄로 강조됩니다. 공동저자 표시(†, +)는
+                   <sup>†</sup> 처럼 감싸면 윗첨자로 표시됩니다.
+   - journalFull : 정식 인용 표기 (저널명, 연도, 권, 페이지 등). 문장 끝에
+                   마침표(.)를 붙여서 마무리합니다.
+   - note        : (선택) Cover feature, Hot Paper 등 추가 코멘트. 없으면 "" 로 둘 것
+   - link        : DOI 또는 논문 링크. 없으면 "" 로 둘 것
+   - toc         : TOC 이미지 파일 경로. "toc/pub01.jpg" 형태로 파일을 넣고
+                   경로만 맞추면 됩니다. 파일이 없으면 흐리게 표시됩니다.
    ============================================================ */
 
   const publications = [
     {
-      journal: "Angew. Chem. Int. Ed.",
+      journal: "Nat. Commun.",
       year: "2026",
-      role: "First author",
-      title: "[논문 제목을 여기에 입력]",
-      authors: '<span class="me">Ha, J.</span>; Co-author, A.; Corresponding, W.*;',
-      journalFull: "<em>Angew. Chem. Int. Ed.</em> <strong>2026</strong>, submitted",
+      status: "",
+      role: "Co-author",
+      title: "Enthalpy-Buffered Cryoadsorption in MOFs for Suppressing Boil-Off Losses in LH₂ Transport",
+      authors: 'Jaewoo Park, Minji Jung, <span class="me">Junsu Ha</span>, Jung Heum Yoon, Jonghyeok Park, Hoi Ri Moon*, Wonyoung Choe*, Hyunchul Oh*',
+      journalFull: "<em>Nat. Commun.</em> <strong>2026</strong>, submitted.",
       note: "",
       link: "",
-      toc: "toc/pub01.jpg"
+      toc: "toc/pub118.jpg"
+    },
+    {
+      journal: "-",
+      year: "2026",
+      status: "In revision",
+      role: "First author",
+      title: "A Locally Flexible Kinetic Valve for Temperature-Programmed Guest Release in Metal-Organic Frameworks",
+      authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Shinyoung Kang, Mingyu Jeon, Jihyun Park, Jihan Kim,* Hyunchul Oh* and Hoi Ri Moon*',
+      journalFull: "<strong>2026</strong>, in revision.",
+      note: "",
+      link: "",
+      toc: "toc/pub117.jpg"
+    },
+    {
+      journal: "Nat. Commun.",
+      year: "2026",
+      status: "Accepted",
+      role: "Co-author",
+      title: "MOF-assisted cryo-adsorption delivers near-liquid volumetric capacity and suppressed boil-off for LH₂ transport",
+      authors: 'Jaewoo Park, <span class="me">Junsu Ha</span>, Hong Kyu Lee, Hyunlim Kim, Sungyeop Jung, Minji Jung, Taeung Park, Monica Jiménez-Ruiz, Margarita Russina, Hoi Ri Moon*, Jitae T. Park*, and Hyunchul Oh*',
+      journalFull: "<em>Nat. Commun.</em> <strong>2026</strong>, accepted.",
+      note: "",
+      link: "",
+      toc: "toc/pub113.jpg"
+    },
+    {
+      journal: "J. Environ. Manage.",
+      year: "2025",
+      status: "",
+      role: "First author",
+      title: "Unraveling the adsorption mechanisms of cationic dyes on defective UiO-66: Insights from kinetics, isotherms, and spectroscopic analyses",
+      authors: 'Jong-Soo Choi<sup>†</sup>, <span class="me">Junsu Ha</span><sup>†</sup>, Yelim Lee, Chang Min Park, Min Jang, Ahjeong Son, Hoi Ri Moon*, Yeomin Yoon* (<sup>†</sup>equally contributed)',
+      journalFull: "<em>J. Environ. Manage.</em> <strong>2025</strong>, <em>393</em>, 127106.",
+      note: "",
+      link: "https://www.sciencedirect.com/science/article/pii/S0301479725030828?via%3Dihub",
+      toc: "toc/pub105.jpg"
+    },
+    {
+      journal: "Small",
+      year: "2025",
+      status: "",
+      role: "Co-author",
+      title: "Rational Pore Design in Multivariate Metal-Organic Frameworks for C₂H₆/C₂H₄ Separation",
+      authors: 'Jihyun Park<sup>†</sup>, Kwang Hyun Oh<sup>†</sup>, Shinyoung Kang, <span class="me">Junsu Ha</span>, SeungJin Lee, Jihan Kim, Youn-Sang Bae*, and Hoi Ri Moon* (<sup>†</sup>equally contributed)',
+      journalFull: "<em>Small</em> <strong>2025</strong>, <em>21</em>, 2500937.",
+      note: "",
+      link: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202500937",
+      toc: "toc/pub100.jpg"
+    },
+    {
+      journal: "ACS Appl. Energy Mater.",
+      year: "2023",
+      status: "",
+      role: "Co-author",
+      title: "20 K H₂ Physisorption on Metal-Organic Frameworks with Enhanced Dormancy Compared to Liquid Hydrogen Storage",
+      authors: 'Jaewoo Park, <span class="me">Junsu Ha</span>, Raeesh Muhammad, Hong Kyu Lee, Rafael Balderas-Xicohtencatl, Yongqiang Cheng, Anibal J. Ramirez-Cuesta, Barbara Streppel, Michael Hirscher,* Hoi Ri Moon* and Hyunchul Oh*',
+      journalFull: "<em>ACS Appl. Energy Mater.</em> <strong>2023</strong>, <em>6</em>, 18, 9057&ndash;9064.",
+      note: "",
+      link: "https://doi.org/10.1021/acsaem.2c01907",
+      toc: "toc/pub87.jpg"
+    },
+    {
+      journal: "Nanoscale Adv.",
+      year: "2023",
+      status: "",
+      role: "First author",
+      title: "Effect of Steric Hindrance on the Interfacial Connection of MOF-on-MOF Architectures",
+      authors: '<span class="me">Junsu Ha</span><sup>†</sup>, Mingyu Jeon<sup>†</sup>, Jihyun Park, Jihan Kim,* and Hoi Ri Moon* (<sup>†</sup>equally contributed)',
+      journalFull: "<em>Nanoscale Adv.</em> <strong>2023</strong>, <em>5</em>, 2111&ndash;2117.",
+      note: "",
+      link: "https://doi.org/10.1039/D2NA00790H",
+      toc: "toc/pub84.jpg"
+    },
+    {
+      journal: "J. Vis. Exp.",
+      year: "2023",
+      status: "",
+      role: "Co-author",
+      title: "Synthesis of Single-Crystalline Core-Shell Metal-Organic Frameworks",
+      authors: 'Jihyun Park, <span class="me">Junsu Ha</span>, and Hoi Ri Moon*',
+      journalFull: "<em>J. Vis. Exp.</em> <strong>2023</strong>, <em>192</em>, e64978.",
+      note: "",
+      link: "https://dx.doi.org/10.3791/64978",
+      toc: "toc/pub83.jpg"
+    },
+    {
+      journal: "ACS Appl. Mater. Interfaces",
+      year: "2022",
+      status: "",
+      role: "First author",
+      title: "Thermodynamic Separation of Hydrogen Isotopes using Hofmann-Type Metal&ndash;Organic Frameworks with High-Density Open Metal Sites",
+      authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Hyunchul Oh,* and Hoi Ri Moon*',
+      journalFull: "<em>ACS Appl. Mater. Interfaces</em> <strong>2022</strong>, <em>14</em>, 27, 30946&ndash;30951.",
+      note: "",
+      link: "https://pubs.acs.org/doi/full/10.1021/acsami.2c07829",
+      toc: "toc/pub81.jpg"
+    },
+    {
+      journal: "Bull. Jpn. Soc. Coord. Chem.",
+      year: "2022",
+      status: "",
+      role: "First author",
+      title: "Dynamic Variation of Responsive Metal-Organic Frameworks toward Specific Stimuli",
+      authors: 'Hong Kyu Lee<sup>†</sup>, <span class="me">Junsu Ha</span><sup>†</sup>, Jihyun Park and Hoi Ri Moon* (<sup>†</sup>equally contributed)',
+      journalFull: "<em>Bull. Jpn. Soc. Coord. Chem.</em> <strong>2022</strong>, <em>79</em>, 50&ndash;57.",
+      note: "Award accounts",
+      link: "https://doi.org/10.4019/bjscc.79.50",
+      toc: ""
+    },
+    {
+      journal: "Bull. Korean Chem. Soc.",
+      year: "2021",
+      status: "",
+      role: "Coressponding author",
+      title: "MOF-on-MOF Architectures: Applications in Separation, Catalysis, and Sensing",
+      authors: 'Doo Hwan Hong, Hui Su Shim, <span class="me">Junsu Ha</span>,* and Hoi Ri Moon*',
+      journalFull: "<em>Bull. Korean Chem. Soc.</em> <strong>2021</strong>, <em>42</em>, 956.",
+      note: "",
+      link: "https://onlinelibrary.wiley.com/doi/full/10.1002/bkcs.12335",
+      toc: "toc/pub73.jpg"
+    },
+    {
+      journal: "Mater. Chem. Front.",
+      year: "2021",
+      status: "",
+      role: "First author",
+      title: "Hydrogen separation and purification with MOF-based materials",
+      authors: 'Dae-Woon Lim,*,<sup>†</sup>, <span class="me">Junsu Ha</span><sup>†</sup>, Yasaswini Oruganti, and Hoi Ri Moon* (<sup>†</sup>equally contributed)',
+      journalFull: "<em>Mater. Chem. Front.</em> <strong>2021</strong>, <em>5</em>, 4022.",
+      note: "",
+      link: "https://pubs.rsc.org/en/content/articlelanding/2021/qm/d1qm00234a#!divAbstract",
+      toc: "toc/pub69.jpg"
+    },
+    {
+      journal: "CrystEngComm",
+      year: "2021",
+      status: "",
+      role: "First author",
+      title: "Synthesis of MOF-on-MOF architectures in the context of interfacial lattice matching",
+      authors: '<span class="me">Junsu Ha</span>, Hoi Ri Moon*',
+      journalFull: "<em>CrystEngComm</em> <strong>2021</strong>, <em>23</em>, 2337.",
+      note: "",
+      link: "https://pubs.rsc.org/en/content/articlelanding/2021/ce/d0ce01883j#!divAbstract",
+      toc: "toc/pub68.jpg"
+    },
+    {
+      journal: "Nano Res.",
+      year: "2021",
+      status: "",
+      role: "Co-author",
+      title: "Solid-State Phase Transformations toward a Metal&ndash;Organic Framework of 7-Connected Zn₄O Secondary Building Units",
+      authors: 'Jaehui Kim, <span class="me">Junsu Ha</span>, Jae Hwa Lee,* and Hoi Ri Moon*',
+      journalFull: "<em>Nano Res.</em> <strong>2021</strong>, <em>14</em>, 411.",
+      note: "",
+      link: "https://link.springer.com/article/10.1007/s12274-020-2873-y",
+      toc: "toc/pub66.jpg"
     },
     {
       journal: "J. Am. Chem. Soc.",
-      year: "2025",
+      year: "2020",
+      status: "",
       role: "Co-author",
-      title: "[두 번째 논문 제목 예시]",
-      authors: 'First, A.; <span class="me">Ha, J.</span>; Corresponding, W.*;',
-      journalFull: "<em>J. Am. Chem. Soc.</em> <strong>2025</strong>, <em>147</em>, 1234\u20131240.",
-      note: "Featured on the cover.",
-      link: "https://doi.org/xx.xxxx/xxxxx",
-      toc: "toc/pub02.jpg"
+      title: "Specific Isotope-Responsive Breathing Transition in Flexible Metal-Organic Frameworks",
+      authors: 'Jin Yeong Kim<sup>+</sup>, Jaewoo Park<sup>+</sup>, <span class="me">Junsu Ha</span>, Minji Jung, Dirk Wallacher, Alexandra Franz, Rafael Balderas-Xicohténcatl, Michael Hirscher, Sung Gu Kang, Jitae Park, In Hwan Oh,* Hoi Ri Moon,* and Hyunchul Oh* (<sup>+</sup>equally contributed)',
+      journalFull: "<em>J. Am. Chem. Soc.</em> <strong>2020</strong>, <em>142</em>, 13278.",
+      note: "Selected as a cover",
+      link: "https://pubs.acs.org/doi/10.1021/jacs.0c04277",
+      toc: "toc/pub63.jpg"
+    },
+    {
+      journal: "Inorg. Chem. Front.",
+      year: "2020",
+      status: "",
+      role: "First author",
+      title: "Alterations to Secondary Building Units of Metal&ndash;Organic Frameworks for the Development of New Functions",
+      authors: '<span class="me">Junsu Ha</span>, Jae Hwa Lee,* and Hoi Ri Moon*',
+      journalFull: "<em>Inorg. Chem. Front.</em> <strong>2020</strong>, <em>7</em>, 12.",
+      note: "Invited Review Article",
+      link: "https://pubs.rsc.org/en/content/articlelanding/2019/QI/C9QI01119F#!divAbstract",
+      toc: "toc/pub58.jpg"
+    },
+    {
+      journal: "Nat. Commun.",
+      year: "2019",
+      status: "",
+      role: "Co-author",
+      title: "Computer-aided Discovery of Connected Metal-Organic Frameworks",
+      authors: 'Ohmin Kwon<sup>+</sup>, Jin Yeong Kim<sup>+</sup>, Sungbin Park, Jae Hwa Lee, <span class="me">Junsu Ha</span>, Hyunsoo Park, Hoi Ri Moon,* and Jihan Kim* (<sup>+</sup>equally contributed)',
+      journalFull: "<em>Nat. Commun.</em> <strong>2019</strong>, <em>10</em>, 3620.",
+      note: "",
+      link: "https://www.nature.com/articles/s41467-019-11629-4",
+      toc: "toc/pub57.jpg"
     }
     // 새 논문 추가 시 여기 아래에 { ... }, 형태로 계속 이어 붙이면 됩니다.
   ];
@@ -191,7 +385,7 @@
   const total = publications.length;
 
   publications.forEach((pub, i) => {
-    const number = total - i; // 최신 항목이 가장 큰 번호를 갖도록 (원본 사이트 방식)
+    const number = total - i; // 최신 항목이 가장 큰 번호를 갖도록
     const roleClass = pub.role.toLowerCase().includes("first") ? "role-first" : "";
 
     const item = document.createElement("div");
@@ -207,6 +401,7 @@
           <span class="pub-number">${number}</span>
           <span class="pub-tag">${pub.journal}</span>
           <span class="pub-tag">${pub.year}</span>
+          ${pub.status ? `<span class="pub-tag status-tag">${pub.status}</span>` : ""}
           <span class="pub-tag ${roleClass}">${pub.role}</span>
         </div>
         <div class="pub-title">${pub.title}</div>
