@@ -54,6 +54,8 @@
     max-height: 6cm;
     width: auto;
     height: auto;
+    border-radius: 6px;
+    border: 1px solid #ddd;
     background: #f7f7f7;
   }
   .pub-main { flex: 1; min-width: 0; }
@@ -97,13 +99,20 @@
   .pub-authors sup { font-size: 0.75em; }
   .pub-journal { font-size: 0.95em; color: #555; margin-bottom: 4px; }
   .pub-note { font-size: 0.9em; color: #777; font-style: italic; margin-bottom: 4px; }
-  .pub-link {
-    font-size: 0.9em;
-    color: #002F5F;
-    text-decoration: none;
+  .year-heading {
+    font-size: 1.4em;
     font-weight: bold;
+    color: #002F5F;
+    margin: 40px 0 8px 0;
+    padding-bottom: 4px;
+    border-bottom: 3px solid #002F5F;
   }
-  .pub-link:hover { text-decoration: underline; }
+  .year-heading:first-child { margin-top: 0; }
+  .pub-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .pub-title a:hover { text-decoration: underline; color: #002F5F; }
   footer {
     text-align: center;
     padding: 20px;
@@ -338,9 +347,23 @@
   ];
   const listEl = document.getElementById("pub-list");
   const total = publications.length;
+  let lastYear = null;
   publications.forEach((pub, i) => {
     const number = total - i;
     const roleClass = pub.role.toLowerCase().includes("first") ? "role-first" : "";
+
+    if (pub.year !== lastYear) {
+      const yearHeading = document.createElement("div");
+      yearHeading.className = "year-heading";
+      yearHeading.textContent = pub.year;
+      listEl.appendChild(yearHeading);
+      lastYear = pub.year;
+    }
+
+    const titleHtml = pub.link
+      ? `<a href="${pub.link}" target="_blank" rel="noopener">${pub.title}</a>`
+      : pub.title;
+
     const item = document.createElement("div");
     item.className = "pub-item";
     item.innerHTML = `
@@ -352,11 +375,10 @@
           ${pub.status ? `<span class="pub-tag status-tag">${pub.status}</span>` : ""}
           <span class="pub-tag ${roleClass}">${pub.role}</span>
         </div>
-        <div class="pub-title">${pub.title}</div>
+        <div class="pub-title">${titleHtml}</div>
         <div class="pub-authors">${pub.authors}</div>
         <div class="pub-journal">${pub.journalFull}</div>
         ${pub.note ? `<div class="pub-note">${pub.note}</div>` : ""}
-        ${pub.link ? `<a class="pub-link" href="${pub.link}" target="_blank" rel="noopener">Link &gt;</a>` : ""}
       </div>
       ${pub.toc ? `
       <div class="pub-toc">
