@@ -175,7 +175,8 @@
 <script src="pubs-data.js"></script>
 <script>
   const previewEl = document.getElementById("pub-list-preview");
-  const recent = publications.slice(0, 3); // 배열 맨 앞이 최신이므로 앞 3개만
+  const recent = publications.filter(pub => pub.featured);
+  <!--const recent = publications.slice(0, 3); // 배열 맨 앞이 최신이므로 앞 3개만>
 
   recent.forEach(pub => {
     const a = document.createElement("a");
