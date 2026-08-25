@@ -75,7 +75,7 @@
   }
   .tag:hover { background: #002F5F; color: white; border-color: #002F5F; }
 
-  /* Publications */
+  /* Selected Publications */
   .pub-list { display: flex; flex-direction: column; gap: 18px; }
   .pub-item {
     display: flex;
@@ -97,6 +97,7 @@
   }
   .pub-title { font-weight: bold; margin-bottom: 4px; }
   .pub-meta { font-size: 0.9em; color: #555; }
+  .pub-meta .me { font-weight: bold; }
 
   .view-all {
     display: inline-block;
@@ -160,31 +161,39 @@
     </div>
   </div>
 
-  <!-- Selected Publications -->
+  <!-- Selected Publications: 최신 3편을 pubs-data.js에서 자동으로 불러옴 -->
   <div class="section" id="publications">
     <h2>Selected Publications</h2>
-    <div class="pub-list">
-      <a class="pub-item" href="#" target="_blank">
-        <img src="pub1-thumbnail.jpg" alt="Publication thumbnail">
-        <div>
-          <div class="pub-title">[논문 제목]</div>
-          <div class="pub-meta">Ha, J.; et al. <em>Angew. Chem. Int. Ed.</em> <strong>2026</strong>, DOI 링크</div>
-        </div>
-      </a>
-      <a class="pub-item" href="#" target="_blank">
-        <img src="pub2-thumbnail.jpg" alt="Publication thumbnail">
-        <div>
-          <div class="pub-title">[논문 제목]</div>
-          <div class="pub-meta">Ha, J.; et al. <em>Journal Name</em> <strong>Year</strong>, DOI 링크</div>
-        </div>
-      </a>
-    </div>
+    <div class="pub-list" id="pub-list-preview"></div>
     <a class="view-all" href="publications.html">View Full List &gt;</a>
   </div>
 
 </div>
 
 <footer>&copy; 2026 Junsu Ha</footer>
+
+<script src="pubs-data.js"></script>
+<script>
+  const previewEl = document.getElementById("pub-list-preview");
+  const recent = publications.slice(0, 3); // 배열 맨 앞이 최신이므로 앞 3개만
+
+  recent.forEach(pub => {
+    const a = document.createElement("a");
+    a.className = "pub-item";
+    a.href = pub.link || "publications.html";
+    a.target = pub.link ? "_blank" : "_self";
+    if (pub.link) a.rel = "noopener";
+
+    a.innerHTML = `
+      ${pub.toc ? `<img src="${pub.toc}" alt="TOC thumbnail" onerror="this.style.display='none';">` : ""}
+      <div>
+        <div class="pub-title">${pub.title}</div>
+        <div class="pub-meta">${pub.authors.replace(/<sup>.*?<\/sup>/g, "")}. ${pub.journalFull}</div>
+      </div>
+    `;
+    previewEl.appendChild(a);
+  });
+</script>
 
 </body>
 </html>
