@@ -34,6 +34,7 @@ const publications = [
     year: "2026",
     status: "In revision",
     role: "First author",
+    featured: true,   // ← 이 논문을 홈에 노출
     title: "A Locally Flexible Kinetic Valve for Temperature-Programmed Guest Release in Metal-Organic Frameworks",
     authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Shinyoung Kang, Mingyu Jeon, Jihyun Park, Jihan Kim,* Hyunchul Oh* and Hoi Ri Moon*',
     journalFull: "<strong>2026</strong>, in revision.",
@@ -94,6 +95,7 @@ const publications = [
     year: "2023",
     status: "",
     role: "First author",
+    featured: true,   // ← 이 논문을 홈에 노출
     title: "Effect of Steric Hindrance on the Interfacial Connection of MOF-on-MOF Architectures",
     authors: '<span class="me">Junsu Ha</span><sup>†</sup>, Mingyu Jeon<sup>†</sup>, Jihyun Park, Jihan Kim,* and Hoi Ri Moon* (<sup>†</sup>equally contributed)',
     journalFull: "<em>Nanoscale Adv.</em> <strong>2023</strong>, <em>5</em>, 2111&ndash;2117.",
@@ -118,6 +120,7 @@ const publications = [
     year: "2022",
     status: "",
     role: "First author",
+    featured: true,   // ← 이 논문을 홈에 노출
     title: "Thermodynamic Separation of Hydrogen Isotopes using Hofmann-Type Metal&ndash;Organic Frameworks with High-Density Open Metal Sites",
     authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Hyunchul Oh,* and Hoi Ri Moon*',
     journalFull: "<em>ACS Appl. Mater. Interfaces</em> <strong>2022</strong>, <em>14</em>, 27, 30946&ndash;30951.",
@@ -166,6 +169,7 @@ const publications = [
     year: "2021",
     status: "",
     role: "First author",
+    featured: true,   // ← 이 논문을 홈에 노출
     title: "Synthesis of MOF-on-MOF architectures in the context of interfacial lattice matching",
     authors: '<span class="me">Junsu Ha</span>, Hoi Ri Moon*',
     journalFull: "<em>CrystEngComm</em> <strong>2021</strong>, <em>23</em>, 2337.",
