@@ -30,14 +30,14 @@ const publications = [
     toc: ""
   },
   {
-    journal: "-",
+    journal: "Angew. Chem., Int. Ed.",
     year: "2026",
-    status: "In revision",
+    status: "Accepted",
     role: "First author",
     featured: true,   // ← 이 논문을 홈에 노출
-    title: "A Locally Flexible Kinetic Valve for Temperature-Programmed Guest Release in Metal-Organic Frameworks",
-    authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Shinyoung Kang, Mingyu Jeon, Jihyun Park, Jihan Kim,* Hyunchul Oh* and Hoi Ri Moon*',
-    journalFull: "<strong>2026</strong>, in revision.",
+    title: "A Locally Flexible Kinetic Valve for Temperature-Programmed Guest Release and Hydrogen Isotope Separation in in Metal-Organic Frameworks",
+    authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Shinyoung Kang, Mingyu Jeon, Jihyun Park, Hyunlim Kim, Jungwon Yi, Jihan Kim,* Hyunchul Oh* and Hoi Ri Moon*',
+    journalFull: "<em>Angew. Chem., Int. Ed.</em> <strong>2026</strong>, accepted.",
     note: "",
     link: "",
     toc: ""
