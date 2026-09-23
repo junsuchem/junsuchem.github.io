@@ -40,31 +40,33 @@ const publications = [
     journalFull: "<em>Angew. Chem., Int. Ed.</em> <strong>2026</strong>, accepted.",
     note: "",
     link: "",
-    toc: ""
+    toc: "toc/toc-16"
   },
   {
     journal: "Nat. Commun.",
     year: "2026",
     status: "Accepted",
     role: "Co-author",
+    featured: true,   // ← 이 논문을 홈에 노출
     title: "MOF-assisted cryo-adsorption delivers near-liquid volumetric capacity and suppressed boil-off for LH₂ transport",
     authors: 'Jaewoo Park, <span class="me">Junsu Ha</span>, Hong Kyu Lee, Hyunlim Kim, Sungyeop Jung, Minji Jung, Taeung Park, Monica Jiménez-Ruiz, Margarita Russina, Hoi Ri Moon*, Jitae T. Park*, and Hyunchul Oh*',
     journalFull: "<em>Nat. Commun.</em> <strong>2026</strong>, accepted.",
     note: "",
-    link: "",
-    toc: ""
+    link: "https://www.nature.com/articles/s41467-026-77420-4",
+    toc: "toc/toc-15"
   },
   {
     journal: "J. Environ. Manage.",
     year: "2025",
     status: "",
     role: "First author",
+    featured: true,   // ← 이 논문을 홈에 노출
     title: "Unraveling the adsorption mechanisms of cationic dyes on defective UiO-66: Insights from kinetics, isotherms, and spectroscopic analyses",
     authors: 'Jong-Soo Choi<sup>†</sup>, <span class="me">Junsu Ha</span><sup>†</sup>, Yelim Lee, Chang Min Park, Min Jang, Ahjeong Son, Hoi Ri Moon*, Yeomin Yoon* (<sup>†</sup>equally contributed)',
     journalFull: "<em>J. Environ. Manage.</em> <strong>2025</strong>, <em>393</em>, 127106.",
     note: "",
     link: "https://www.sciencedirect.com/science/article/pii/S0301479725030828?via%3Dihub",
-    toc: ""
+    toc: "toc/toc-14.png"
   },
   {
     journal: "Small",
