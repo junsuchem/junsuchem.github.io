@@ -40,7 +40,7 @@ const publications = [
     journalFull: "<em>Angew. Chem., Int. Ed.</em> <strong>2026</strong>, accepted.",
     note: "",
     link: "",
-    toc: "toc/toc-16"
+    toc: "toc/toc-16.jpg"
   },
   {
     journal: "Nat. Commun.",
@@ -53,7 +53,7 @@ const publications = [
     journalFull: "<em>Nat. Commun.</em> <strong>2026</strong>, accepted.",
     note: "",
     link: "https://www.nature.com/articles/s41467-026-77420-4",
-    toc: "toc/toc-15"
+    toc: "toc/toc-15.png"
   },
   {
     journal: "J. Environ. Manage.",
@@ -66,7 +66,7 @@ const publications = [
     journalFull: "<em>J. Environ. Manage.</em> <strong>2025</strong>, <em>393</em>, 127106.",
     note: "",
     link: "https://www.sciencedirect.com/science/article/pii/S0301479725030828?via%3Dihub",
-    toc: "toc/toc-14.png"
+    toc: "toc/toc-14.jpg"
   },
   {
     journal: "Small",
