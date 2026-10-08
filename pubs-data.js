@@ -35,9 +35,9 @@ const publications = [
     status: "",
     role: "First author",
     featured: true,   // ← 이 논문을 홈에 노출
-    title: "A Locally Flexible Kinetic Valve for Temperature-Programmed Guest Release and Hydrogen Isotope Separation in in Metal-Organic Frameworks",
+    title: "A Locally Flexible Kinetic Valve for Temperature-Programmed Guest Release and Hydrogen Isotope Separation in Metal-Organic Frameworks",
     authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Shinyoung Kang, Mingyu Jeon, Jihyun Park, Hyunlim Kim, Jungwon Yi, Jihan Kim,* Hyunchul Oh* and Hoi Ri Moon*',
-    journalFull: "<em>Angew. Chem., Int. Ed.</em> <strong>2026</strong>, e2943024. doi.org/10.1002/anie.2943024."
+    journalFull: "<em>Angew. Chem., Int. Ed.</em> <strong>2026</strong>, e2943024. doi.org/10.1002/anie.2943024.",
     note: "",
     link: "https://doi.org/10.1002/anie.2943024",
     toc: "toc/toc-16.jpg"
