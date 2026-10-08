@@ -32,14 +32,14 @@ const publications = [
   {
     journal: "Angew. Chem., Int. Ed.",
     year: "2026",
-    status: "Accepted",
+    status: "",
     role: "First author",
     featured: true,   // ← 이 논문을 홈에 노출
     title: "A Locally Flexible Kinetic Valve for Temperature-Programmed Guest Release and Hydrogen Isotope Separation in in Metal-Organic Frameworks",
     authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Shinyoung Kang, Mingyu Jeon, Jihyun Park, Hyunlim Kim, Jungwon Yi, Jihan Kim,* Hyunchul Oh* and Hoi Ri Moon*',
-    journalFull: "<em>Angew. Chem., Int. Ed.</em> <strong>2026</strong>, accepted.",
+    journalFull: "<em>Angew. Chem., Int. Ed.</em> <strong>2026</strong>, e2943024. doi.org/10.1002/anie.2943024."
     note: "",
-    link: "",
+    link: "https://doi.org/10.1002/anie.2943024",
     toc: "toc/toc-16.jpg"
   },
   {
@@ -52,7 +52,7 @@ const publications = [
     authors: 'Jaewoo Park, <span class="me">Junsu Ha</span>, Hong Kyu Lee, Hyunlim Kim, Sungyeop Jung, Minji Jung, Taeung Park, Monica Jiménez-Ruiz, Margarita Russina, Hoi Ri Moon*, Jitae T. Park*, and Hyunchul Oh*',
     journalFull: "<em>Nat. Commun.</em> <strong>2026</strong>, accepted.",
     note: "",
-    link: "https://www.nature.com/articles/s41467-026-77420-4",
+    link: "https://doi.org/10.1038/s41467-026-77420-4",
     toc: "toc/toc-15.png"
   },
   {
@@ -65,7 +65,7 @@ const publications = [
     authors: 'Jong-Soo Choi<sup>†</sup>, <span class="me">Junsu Ha</span><sup>†</sup>, Yelim Lee, Chang Min Park, Min Jang, Ahjeong Son, Hoi Ri Moon*, Yeomin Yoon* (<sup>†</sup>equally contributed)',
     journalFull: "<em>J. Environ. Manage.</em> <strong>2025</strong>, <em>393</em>, 127106.",
     note: "",
-    link: "https://www.sciencedirect.com/science/article/pii/S0301479725030828?via%3Dihub",
+    link: "https://doi.org/10.1016/j.jenvman.2025.127106",
     toc: "toc/toc-14.jpg"
   },
   {
@@ -77,7 +77,7 @@ const publications = [
     authors: 'Jihyun Park<sup>†</sup>, Kwang Hyun Oh<sup>†</sup>, Shinyoung Kang, <span class="me">Junsu Ha</span>, SeungJin Lee, Jihan Kim, Youn-Sang Bae*, and Hoi Ri Moon* (<sup>†</sup>equally contributed)',
     journalFull: "<em>Small</em> <strong>2025</strong>, <em>21</em>, 2500937.",
     note: "",
-    link: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202500937",
+    link: "https://doi.org/10.1002/smll.202500937",
     toc: "toc/toc-13.png"
   },
   {
@@ -127,7 +127,7 @@ const publications = [
     authors: '<span class="me">Junsu Ha</span>, Minji Jung, Jaewoo Park, Hyunchul Oh,* and Hoi Ri Moon*',
     journalFull: "<em>ACS Appl. Mater. Interfaces</em> <strong>2022</strong>, <em>14</em>, 27, 30946&ndash;30951.",
     note: "",
-    link: "https://pubs.acs.org/doi/full/10.1021/acsami.2c07829",
+    link: "https://doi.org/10.1021/acsami.2c07829",
     toc: "toc/toc-9.jpg"
   },
   {
@@ -151,7 +151,7 @@ const publications = [
     authors: 'Doo Hwan Hong, Hui Su Shim, <span class="me">Junsu Ha</span>,* and Hoi Ri Moon*',
     journalFull: "<em>Bull. Korean Chem. Soc.</em> <strong>2021</strong>, <em>42</em>, 956.",
     note: "",
-    link: "https://onlinelibrary.wiley.com/doi/full/10.1002/bkcs.12335",
+    link: "https://doi.org/10.1002/bkcs.12335",
     toc: "toc/toc-7.png"
   },
   {
@@ -163,7 +163,7 @@ const publications = [
     authors: 'Dae-Woon Lim,*,<sup>†</sup>, <span class="me">Junsu Ha</span><sup>†</sup>, Yasaswini Oruganti, and Hoi Ri Moon* (<sup>†</sup>equally contributed)',
     journalFull: "<em>Mater. Chem. Front.</em> <strong>2021</strong>, <em>5</em>, 4022.",
     note: "",
-    link: "https://pubs.rsc.org/en/content/articlelanding/2021/qm/d1qm00234a#!divAbstract",
+    link: "https://doi.org/10.1039/d1qm00234a",
     toc: "toc/toc-6.jpg"
   },
   {
@@ -171,12 +171,11 @@ const publications = [
     year: "2021",
     status: "",
     role: "First author",
-    featured: true,   // ← 이 논문을 홈에 노출
     title: "Synthesis of MOF-on-MOF architectures in the context of interfacial lattice matching",
     authors: '<span class="me">Junsu Ha</span>, Hoi Ri Moon*',
     journalFull: "<em>CrystEngComm</em> <strong>2021</strong>, <em>23</em>, 2337.",
     note: "",
-    link: "https://pubs.rsc.org/en/content/articlelanding/2021/ce/d0ce01883j#!divAbstract",
+    link: "https://doi.org/10.1039/d0ce01883j",
     toc: "toc/toc-5.jpg"
   },
   {
@@ -188,7 +187,7 @@ const publications = [
     authors: 'Jaehui Kim, <span class="me">Junsu Ha</span>, Jae Hwa Lee,* and Hoi Ri Moon*',
     journalFull: "<em>Nano Res.</em> <strong>2021</strong>, <em>14</em>, 411.",
     note: "",
-    link: "https://link.springer.com/article/10.1007/s12274-020-2873-y",
+    link: "https://doi.org/10.1007/s12274-020-2873-y",
     toc: "toc/toc-4.png"
   },
   {
@@ -200,7 +199,7 @@ const publications = [
     authors: 'Jin Yeong Kim<sup>+</sup>, Jaewoo Park<sup>+</sup>, <span class="me">Junsu Ha</span>, Minji Jung, Dirk Wallacher, Alexandra Franz, Rafael Balderas-Xicohténcatl, Michael Hirscher, Sung Gu Kang, Jitae Park, In Hwan Oh,* Hoi Ri Moon,* and Hyunchul Oh* (<sup>+</sup>equally contributed)',
     journalFull: "<em>J. Am. Chem. Soc.</em> <strong>2020</strong>, <em>142</em>, 13278.",
     note: "Selected as a cover",
-    link: "https://pubs.acs.org/doi/10.1021/jacs.0c04277",
+    link: "hhttps://doi.org/10.1021/jacs.0c04277",
     toc: "toc/toc-3.png"
   },
   {
@@ -212,7 +211,7 @@ const publications = [
     authors: '<span class="me">Junsu Ha</span>, Jae Hwa Lee,* and Hoi Ri Moon*',
     journalFull: "<em>Inorg. Chem. Front.</em> <strong>2020</strong>, <em>7</em>, 12.",
     note: "Invited Review Article",
-    link: "https://pubs.rsc.org/en/content/articlelanding/2019/QI/C9QI01119F#!divAbstract",
+    link: "https://doi.org/10.1039/c9qi01119f",
     toc: "toc/toc-2.png"
   },
   {
@@ -224,7 +223,7 @@ const publications = [
     authors: 'Ohmin Kwon<sup>+</sup>, Jin Yeong Kim<sup>+</sup>, Sungbin Park, Jae Hwa Lee, <span class="me">Junsu Ha</span>, Hyunsoo Park, Hoi Ri Moon,* and Jihan Kim* (<sup>+</sup>equally contributed)',
     journalFull: "<em>Nat. Commun.</em> <strong>2019</strong>, <em>10</em>, 3620.",
     note: "",
-    link: "https://www.nature.com/articles/s41467-019-11629-4",
+    link: "https://doi.org/10.1038/s41467-019-11629-4",
     toc: "toc/toc-1.png"
   }
 ];
