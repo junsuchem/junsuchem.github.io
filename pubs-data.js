@@ -50,7 +50,7 @@ const publications = [
     featured: true,   // ← 이 논문을 홈에 노출
     title: "MOF-assisted cryo-adsorption delivers near-liquid volumetric capacity and suppressed boil-off for LH₂ transport",
     authors: 'Jaewoo Park, <span class="me">Junsu Ha</span>, Hong Kyu Lee, Hyunlim Kim, Sungyeop Jung, Minji Jung, Taeung Park, Monica Jiménez-Ruiz, Margarita Russina, Hoi Ri Moon*, Jitae T. Park*, and Hyunchul Oh*',
-    journalFull: "<em>Nat. Commun.</em> <strong>2026</strong>, accepted.",
+    journalFull: "<em>Nat. Commun.</em> <strong>2026</strong>, <em>17</em> 10592.",
     note: "",
     link: "https://doi.org/10.1038/s41467-026-77420-4",
     toc: "toc/toc-15.png"
